@@ -1,0 +1,37 @@
+[
+    {
+      "eid": 1,
+      "fname": "Madhu",
+      "lname": "S",
+      "gender": "F",
+      "email": "madhu@gmail.com"
+    },
+    {
+      "eid": 2,
+      "fname": "vaishu",
+      "lname": "Shri",
+      "gender": "F",
+      "email": "vaishu@gmail.com"
+    },
+    {
+      "eid": 3,
+      "fname": "Ramya",
+      "lname": "S",
+      "gender": "F",
+      "email": "ramya@gmail.com"
+    },
+    {
+      "eid": 4,
+      "fname": "Arul",
+      "lname": "S",
+      "gender": "F",
+      "email": "arul@gmail.com"
+    },
+    {
+      "eid": 5,
+      "fname": "pavi",
+      "lname": "S",
+      "gender": "M",
+      "email": "pavi@gmail.com"
+    }
+  ]

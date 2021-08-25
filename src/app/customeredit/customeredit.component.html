@@ -1,0 +1,147 @@
+ 
+ 
+ 
+     
+    <h1 style="text-align: center">Verify</h1>
+   <form id="form1">  
+    <div class="form-group"> 
+      <div class="form-group">
+        <label for="name"> First Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="firstName"
+          [(ngModel)]="customerData.firstName"
+          placeholder="Enter your First Name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="name"> Last Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="lastName"
+          [(ngModel)]="customerData.lastName"
+          placeholder="Enter your Last Name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="name"> Father First Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="fatherFirstName"
+          [(ngModel)]="customerData.fatherFirstName"
+          placeholder="Enter your Father First Name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="dob"> Father Last Name:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="fatherLastName"
+          [(ngModel)]="customerData.fatherLastName"
+          placeholder="Enter your Father last Name"
+        />
+      </div>
+
+      <div>
+        <label for="lblgender">Gender </label> <br />
+        <div class="form-check-inline">
+          <label class="form-check-label" for="lblrdmale"> Male </label>
+          <input
+            class="form-check-input"
+            type="radio"
+            name="gender"
+            id="lblgender"
+            
+            value="Male"
+            [(ngModel)]="customerData.gender"
+            checked
+          />
+
+          <label class="form-check-label" for="lblrdfemale"> Female </label>
+          <input
+            class="form-check-input"
+            type="radio"
+            name="gender"
+            id="gender"
+            value="Female"
+            [(ngModel)]="customerData.gender"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          [(ngModel)]="customerData.email"
+          placeholder="Enter your Mail id"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone No.:</label>
+        <input
+          type="number"
+          class="form-control"
+          id="phone"
+          name="phoneNo"
+          [(ngModel)]="customerData.phoneNo"
+          placeholder="Enter your Contact Number"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="aadhar">Aadhar No.:</label>
+        <input
+          type="number"
+          class="form-control"
+          id="phone"
+          name="aadharNo"
+          [(ngModel)]="customerData.aadharNo"
+          placeholder="Enter your Contact Number"
+        />
+      </div>
+      <div class="form-group">
+        <label for="phone">Address:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="phone"
+          name="address"
+          [(ngModel)]="customerData.address"
+          placeholder="Address line 1"
+        />
+      </div>
+      <div class="form-check mb-2 mr-sm-2">
+        <input class="form-check-input" type="checkbox" id="inlineFormCheck">
+        <label class="form-check-label" for="inlineFormCheck">
+          Everything is correct
+        </label>
+      </div>
+ 
+      <div class="form-group">
+        <button type="submit" (click)="updateCustomer()" class="btn btn-primary">
+          approve !
+        </button>
+      </div>
+        
+      
+    </div>
+    <br />
+  </form>
+  
+ 

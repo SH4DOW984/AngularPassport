@@ -1,0 +1,78 @@
+<section class="vh-100 gradient-custom">
+  <div class="container-fluid h-custom" id="main">
+    <div
+      class="row d-flex justify-content-center align-items-center h-100 w-50"
+    >
+      <div class="formpg font-color">
+        <h1 style="text-align: center">
+          <b> Sign up </b>
+        </h1>
+
+        <div class="form-outline mb-4">
+          <label for="email"><b> Enter Email address: </b></label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter a email address"
+            id="email"
+            name="email"
+            required
+            [(ngModel)]="userDetail.email"
+            #email="ngModel"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{3,3}$"          
+          />          
+        </div>
+        <div class="text-danger fs-6" [class.d-none]="email.valid || email.untouched || !email.errors">
+          *Please enter a valid email ....
+        </div>
+
+
+
+        <div class="form-outline mb-3">
+          <label for="pwd"><b> Password: </b></label>
+          <input
+            type="password"
+            class="form-control form-control-lg"
+            placeholder="Enter password"
+            id="password"
+            pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}"
+            name="password"
+            required
+            [(ngModel)]="userDetail.password"
+            #password="ngModel"
+           
+             
+          />
+          <span
+            ngModel
+            style="color: red"
+            class="help-block"
+            *ngIf="!password.valid && password.touched"
+          >
+            Please enter a valid password</span
+          >
+        </div>
+
+        <br />
+        <div class="form-group">
+          <button
+            type="submit"
+            (click)="newUser()"
+            class="btn btn-primary"
+            style="display: grid; margin: auto"
+          >
+            Submit
+          </button>
+        </div>
+        <br />
+        <div>
+          <h5>
+            Already have a account &nbsp; &nbsp;<a routerLink="/login">
+              <button class="btn btn-success">Login</button></a
+            >
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

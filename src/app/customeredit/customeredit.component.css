@@ -1,0 +1,17 @@
+ 
+form { 
+    margin: 0 auto; 
+    width:500px;
+}
+body {
+    width: 100%;
+  height: 100%;
+  /*
+  background-image: url("B:\MLA training\ANGULARFOLD\PassportApplication/src/assets/aero-3.jfif");
+  */
+    background-color:rgb(122, 210, 245);
+    background-repeat: no-repeat;
+    background-size: 100% ;  
+    background-size:cover;  
+  }
+ 

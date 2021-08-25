@@ -1,0 +1,81 @@
+<section class="vh-100 gradient-custom">
+  <div class="container-fluid h-custom" id="main">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="formpg font-color">
+        <h1 style="text-align: center">Login</h1>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email" required [(ngModel)]="logcred.email"
+            placeholder="Enter your email"
+            name="email"
+            #email="ngModel"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{3,3}$"
+ 
+          />
+        </div>
+       
+      <div class="text-danger fs-6" [class.d-none]="email.valid || email.untouched || !email.errors">
+        *Please enter a valid email
+      </div>
+        {{ logcred.email }}
+
+
+
+        <div class="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Enter your password"
+            name="password"
+             
+            [(ngModel)]="logcred.password"
+            required
+          />
+        </div>
+        <br />
+        <div>
+          <label for="designation">Designation:</label> &nbsp; &nbsp;
+          <input
+            id="manager"
+            class="form-check-input"
+            name="designation"
+            type="radio"
+            value="customer"
+            [(ngModel)]="logcred.designation"
+          />customer &nbsp;&nbsp;
+          <input
+            id="employee"
+            class="form-check-input"
+            name="designation"
+            type="radio"
+            value="employee"
+            [(ngModel)]="logcred.designation"
+          />Employee
+        </div>
+        <br />
+        <div class="form-group">
+          <button
+            type="submit"
+            name="log"
+            class="btn btn-success"
+            (click)="validateUser()"
+            style="display: grid; margin: auto"
+          >
+            Login
+          </button>
+        </div>
+        <br />
+        &nbsp; &nbsp; New User?
+        <a routerLink="/register" routerLinkActive="active">Signup</a>
+
+        <br />
+</div>
+      </div>
+    </div>
+   
+</section>

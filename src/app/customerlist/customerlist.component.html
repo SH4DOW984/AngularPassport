@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+<table class="table table-hover table-info table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">CUSTOMER ID</th>
+      <th scope="col">CUSTOMER FIRST NAME</th>
+      <th scope="col"> CUSTOMER LAST NAME</th>
+      <th scope="col">FATHER FIRST NAME</th>
+      <th scope="col"> FATHER LAST NAME</th>
+      <th scope="col">GENDER</th>
+      <th scope="col">EMAIL</th>
+      <th scope="col">PHONE-NO</th>
+      <th scope="col">AADHAR-NO</th>
+      <th scope="col">ADDRESS</th>
+      <th scope="col">STATUS</th>
+      <th scope="col">CHECK & VERIFY</th>
+      <th scope="col"> DELETE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cus of customer">
+      <td>{{ cus.cid }}</td>
+      <td>{{ cus.firstName }}</td>
+      <td>{{ cus.lastName }}</td>
+      <td>{{ cus.fatherFirstName }}</td>
+      <td>{{ cus.fatherLastName }}</td>
+      <td>{{ cus.gender }}</td>
+      <td>{{ cus.email }}</td>
+      <td>{{ cus.phoneNo }}</td>
+      <td>{{ cus.aadharNo }}</td>
+      <td>{{ cus.address }}</td>
+      <td >{{   status  }}</td> 
+      <td>
+        <button
+          type="submit"          
+          routerLink="/customeredit/{{ cus.cid }}"
+          class="edit btn-success"        
+        >
+        <i class="fa fa-check-circle" style="font-size:40px;color:rgb(195, 243, 151)"></i> 
+        </button>
+      </td>
+ 
+      <td>
+        <button
+          type="submit"
+          class="delete btn-danger"
+          (click)="deleteCustomer(cus.cid)"
+        >
+        <i class="material-icons" style="font-size:40px;color:rgb(243, 209, 209)">delete</i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

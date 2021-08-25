@@ -1,0 +1,217 @@
+<body>
+  <form class="form-horizontal">
+    <h1 style="text-align: center">Register</h1>
+    <div>
+      <div class="form-group">
+        <label for="lasttName">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="firstName"
+          required
+          [(ngModel)]="customerDetails.firstName"
+          name="txtfirstName"
+          placeholder="First Name"
+          #firstName="ngModel"
+          id="txtfirstName"
+          pattern="^[a-zA-Z\s]{1,15}$"
+        />
+      </div>
+      <div
+        class="text-danger fs-6"
+        [class.d-none]="
+          firstName.valid || firstName.untouched || !firstName.errors
+        "
+      >
+        *Please enter a valid name (Must be 1-15 letters long)
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastname"
+          required
+          [(ngModel)]="customerDetails.lastName"
+          name="txtlastName"
+          placeholder="Last Name"
+          #lastName="ngModel"
+          id="txtlastName"
+          pattern="^[a-zA-Z\s]{1,15}$"
+        />
+      </div>
+      <div
+        class="text-danger fs-6"
+        [class.d-none]="
+          lastName.valid || lastName.untouched || !lastName.errors
+        "
+      >
+        *Please enter a valid name (Must be 1-15 letters long)
+      </div>
+
+      <div class="form-group">
+        <label for="fatherFirstName">Father First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="fatherFirstName"
+          required
+          [(ngModel)]="customerDetails.fatherFirstName"
+          name="txtfatherFirstName"
+          placeholder="Father First Name"
+          #fatherFirstName="ngModel"
+          id="txtfatherFirstName"
+          pattern="^[a-zA-Z\s]{1,15}$"
+        />
+      </div>
+      <div
+        class="text-danger fs-6"
+        [class.d-none]="
+          fatherFirstName.valid ||
+          fatherFirstName.untouched ||
+          !fatherFirstName.errors
+        "
+      >
+        *Please enter a valid name (Must be 1-15 letters long)
+      </div>
+
+      <div class="form-group">
+        <label for="fatherLastName">Father Last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="fatherLastName"
+          required
+          [(ngModel)]="customerDetails.fatherLastName"
+          name="txtfatherLastName"
+          placeholder="Father Last Name"
+          #fatherLastName="ngModel"
+          id="txtfatherLastName"
+          pattern="^[a-zA-Z\s]{1,15}$"
+        />
+      </div>
+      <div
+        class="text-danger fs-6"
+        [class.d-none]="
+          fatherLastName.valid ||
+          fatherLastName.untouched ||
+          !fatherLastName.errors
+        "
+      >
+        *Please enter a valid name (Must be 1-15 letters long)
+      </div>
+
+      <div>
+        <label for="lblgender">Gender </label> <br />
+        <div class="form-check-inline">
+          <label class="form-check-label" for="lblrdmale"> Male </label>
+          <input
+            class="form-check-input"
+            type="radio"
+            name="gender"
+            id="lblgender"
+            value="Male"
+            [(ngModel)]="customerDetails.gender"
+            checked
+          />
+
+          <label class="form-check-label" for="lblrdfemale"> Female </label>
+          <input
+            class="form-check-input"
+            type="radio"
+            name="gender"
+            id="lblgender"
+            value="Female"
+            [(ngModel)]="customerDetails.gender"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          required
+          [(ngModel)]="customerDetails.email"
+          name="email"
+          #email="ngModel"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{3,3}$"
+        />
+      </div>
+      <div
+        class="text-danger fs-6"
+        [class.d-none]="email.valid || email.untouched || !email.errors"
+      >
+        *Please enter a valid email
+      </div>
+
+      <div class="form-group">
+        <label for="phoneNo">Phone No</label>
+        <input
+          type="number"
+          class="form-control"
+          id="phoneNo"
+          required
+          [(ngModel)]="customerDetails.phoneNo"
+          name="phoneNo"
+          placeholder="phone No"
+          #phoneNo="ngModel"
+          pattern="[0-9]{10}"
+        />
+      </div>
+      <div
+        class="text-danger fs-6"
+        [class.d-none]="phoneNo.valid || phoneNo.untouched || !phoneNo.errors"
+      >
+        *Please enter a valid Phone No.(must be 10 digits long)
+      </div>
+
+      <div class="form-group">
+        <label for="aadharNo">Aadhar No</label>
+        <input
+          type="number"
+          class="form-control"
+          id="aadharNo"
+          required
+          [(ngModel)]="customerDetails.aadharNo"
+          name="aadharNo"
+          placeholder="Aadhar No"
+          #aadharNo="ngModel"
+          pattern="[0-9]{12}"
+        />
+      </div>
+      <div
+        class="text-danger fs-6"
+        [class.d-none]="
+          aadharNo.valid || aadharNo.untouched || !aadharNo.errors
+        "
+      >
+        *Please enter a valid Aadhar No.(must be 12 digits long)
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="phone"
+          name="address"
+          [(ngModel)]="customerDetails.address"
+          placeholder="Address line 1"
+        />
+      </div>
+      <div id="loginlink">
+        <p>Already have an Account?</p>
+        <a href="/login">Login</a>
+      </div>
+      <div class="form-group">
+        <button type="submit" (click)="addCustomer()" class="btn btn-primary">
+          apply !
+        </button>
+      </div>
+    </div>
+    <br />
+  </form>
+</body>

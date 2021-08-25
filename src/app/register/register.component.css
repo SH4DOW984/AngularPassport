@@ -1,0 +1,26 @@
+.formpg{
+  width:400px; 
+   
+  margin: auto;
+  display:block;
+  border-radius: 15%;
+  background-color: rgb(59, 190, 230);
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+ 
+
+.font-color{
+color: white;
+font-weight: bold;
+}
+
+.fc{
+  height: 500px;
+}
+#main{
+  background-image: url("https://png.pngtree.com/background/20210710/original/pngtree-travel-around-the-world-travel-poster-template-picture-image_1017255.jpg");
+  height: 500px;
+}
+ 

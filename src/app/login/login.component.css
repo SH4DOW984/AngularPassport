@@ -1,0 +1,26 @@
+.formpg{
+  width:400px; 
+   height: 360px;
+  margin: auto;
+  display:block;
+  border-radius: 15%;
+  background-color: rgb(53, 120, 141);
+  padding-left: 30px;
+  padding-right: 10px;
+}
+
+ 
+
+.font-color{
+color: white;
+font-weight: bold;
+}
+
+.fc{
+  height: 500px;
+}
+#main{
+  background-image: url("https://png.pngtree.com/background/20210710/original/pngtree-taobao-retro-floor-vector-cartoon-passport-calendar-photo-mobile-phone-poster-picture-image_994311.jpg");
+  height: 630px;
+}
+ 
